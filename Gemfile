@@ -13,6 +13,7 @@ gem 'sass-rails',       '~> 4.0.3'
 gem 'slim-rails',       '~> 2.1.5'
 gem 'sqlite3',          '~> 1.3.9'
 gem 'uglifier',         '>= 1.3.0'
+gem 'seed_migration',   '~> 1.0.3'
 
 group :development do
   gem 'better_errors',  '~> 2.0.0'

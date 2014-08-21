@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821130116) do
+ActiveRecord::Schema.define(version: 20140821130908) do
 
   create_table "bars", force: true do |t|
     t.string   "name"
@@ -35,6 +35,12 @@ ActiveRecord::Schema.define(version: 20140821130116) do
   end
 
   add_index "drink_styles", ["name"], name: "index_drink_styles_on_name", unique: true
+
+  create_table "seed_migration_data_migrations", force: true do |t|
+    t.string   "version"
+    t.integer  "runtime"
+    t.datetime "migrated_on"
+  end
 
   create_table "zik_styles", force: true do |t|
     t.string   "name"
