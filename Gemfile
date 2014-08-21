@@ -4,6 +4,7 @@ ruby    '2.1.2'
 gem 'rails',            '4.1.0'
 
 gem 'coffee-rails',     '~> 4.0.0'
+gem 'foreman',          '~> 0.74.0'
 gem 'foundation-rails', '~> 5.3.3.0'
 gem 'high_voltage',     '~> 2.2.1'
 gem 'jbuilder',         '~> 2.0'
