@@ -1,0 +1,12 @@
+div class="row"
+  div class="columns small-12"
+    = simple_form_for bar_form do |form|
+      = form.input :name
+      = form.input :address
+      = form.input :city
+      = form.input :country, iso_codes: true
+      = form.association :zik_style
+      = form.association :drink_style
+
+      = form.submit "Create", class: "button radius"
+

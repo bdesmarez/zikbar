@@ -1,0 +1,24 @@
+div class="row"
+  div class="columns small-12"
+    table
+      thead
+        tr
+          th Name
+          th City
+          th Country
+          th Drink
+          th Zik
+          th Action
+      tbody
+        - bars.each do |bar|
+          tr
+            td= link_to bar.name, bar_path(bar)
+            td= bar.city
+            td= country_name(bar.country)
+            td
+              = bar.drink_style.name if bar.drink_style
+            td
+              = bar.zik_style.name if bar.zik_style
+            td
+              = link_to "edit", edit_bar_path(bar), class: "button tiny radius secondary", style: "margin-bottom:0"
+

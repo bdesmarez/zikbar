@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root to: 'visitors#index'
 
-  resources :bars, only: [:index, :show]
+  resources :bars
 end
