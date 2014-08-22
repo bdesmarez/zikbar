@@ -10,7 +10,7 @@ class BarForm < Reform::Form
   validates :city,    presence: true
   validates :country, presence: true
 
-  # def self.reflect_on_association(association)
-  #   Bar.reflect_on_association(association)
-  # end
+  def self.reflect_on_association(association)
+    Bar.reflect_on_association(association)
+  end
 end
