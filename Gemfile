@@ -29,6 +29,7 @@ end
 
 group :development, :test do
   gem 'factory_girl',     '~> 4.4.0'
+  gem 'faker',            '~> 1.4.3'
   gem 'guard',            '~> 2.6.1'
   gem 'guard-rspec',      '~> 4.3.1'
   gem 'rspec-rails',      '~> 3.0.0'

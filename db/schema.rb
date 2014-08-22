@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821130908) do
+ActiveRecord::Schema.define(version: 20140822154354) do
 
   create_table "bars", force: true do |t|
     t.string   "name"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20140821130908) do
     t.datetime "updated_at"
     t.integer  "drink_style_id"
     t.integer  "zik_style_id"
+    t.decimal  "popularity",     precision: 5, scale: 2, default: 0.0
   end
 
   add_index "bars", ["drink_style_id"], name: "index_bars_on_drink_style_id"
