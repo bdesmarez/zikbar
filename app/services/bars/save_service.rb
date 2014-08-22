@@ -1,7 +1,7 @@
 module Bars
   class SaveService
     def initialize(form, params)
-      @form = form
+      @form   = form
       @params = params
     end
 
