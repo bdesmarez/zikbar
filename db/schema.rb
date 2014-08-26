@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140822154354) do
+ActiveRecord::Schema.define(version: 20140826110644) do
 
   create_table "bars", force: true do |t|
     t.string   "name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20140822154354) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "note",       default: 0
   end
 
   add_index "drink_styles", ["name"], name: "index_drink_styles_on_name", unique: true
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 20140822154354) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "note",       default: 0
   end
 
   add_index "zik_styles", ["name"], name: "index_zik_styles_on_name", unique: true
