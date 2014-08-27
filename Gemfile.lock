@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/apotonick/reform.git
+  revision: 25638eb02eaa1ffd1e6396d544033faf22cb42d6
+  specs:
+    reform (1.1.0)
+      activemodel
+      disposable (~> 0.0.5)
+      representable (~> 2.0.3)
+      uber (~> 0.0.8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -143,11 +153,6 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    reform (1.1.0)
-      activemodel
-      disposable (~> 0.0.5)
-      representable (~> 2.0.3)
-      uber (~> 0.0.8)
     representable (2.0.3)
       multi_json
       nokogiri
@@ -245,7 +250,7 @@ DEPENDENCIES
   quiet_assets (~> 1.0.3)
   rails (= 4.1.0)
   rails_layout (~> 1.0.21)
-  reform (~> 1.1.0)
+  reform!
   rspec-rails (~> 3.0.0)
   rubocop (~> 0.25.0)
   sass-rails (~> 4.0.3)

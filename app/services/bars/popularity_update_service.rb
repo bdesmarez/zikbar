@@ -5,13 +5,24 @@ module Bars
     end
 
     def call
-      if @bar.drink_style.note && @bar.zik_style.note
+      if drink_note_is_present? && zik_note_is_present?
         # Some hard and unexplicit popularity calculs
-        arr = [@bar.drink_style.note, @bar.zik_style.note]
-        arr.inject{ |sum, el| sum + el }.to_f / arr.size
+        avg = (@bar.drink_style.note + @bar.zik_style.note) / 2.0
+        @bar.update_attribute(:popularity, avg)
       else
-        nil
+        @bar.update_attribute(:popularity, nil)
       end
     end
+
+    private
+
+    def drink_note_is_present?
+      @bar.drink_style && @bar.drink_style.note
+    end
+
+    def zik_note_is_present?
+      @bar.zik_style && @bar.zik_style.note
+    end
+
   end
 end
