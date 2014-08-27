@@ -11,7 +11,7 @@ gem 'foundation-rails',   '~> 5.3.3.0'
 gem 'high_voltage',       '~> 2.2.1'
 gem 'jbuilder',           '~> 2.0'
 gem 'jquery-rails',       '~> 3.1.1'
-gem 'reform',             '~> 1.1.0'
+gem 'reform',             git: 'https://github.com/apotonick/reform.git'
 gem 'sass-rails',         '~> 4.0.3'
 gem 'seed_migration',     '~> 1.0.3'
 gem 'simple_form',        '~> 3.0.2'
@@ -28,10 +28,10 @@ group :development do
 end
 
 group :development, :test do
-  gem 'factory_girl',     '~> 4.4.0'
-  gem 'faker',            '~> 1.4.3'
-  gem 'guard',            '~> 2.6.1'
-  gem 'guard-rspec',      '~> 4.3.1'
-  gem 'rspec-rails',      '~> 3.0.0'
-  gem 'shoulda-matchers', '~> 2.6.2', require: false
+  gem 'factory_girl_rails', '~> 4.4.0'
+  gem 'faker',              '~> 1.4.3'
+  gem 'guard',              '~> 2.6.1'
+  gem 'guard-rspec',        '~> 4.3.1'
+  gem 'rspec-rails',        '~> 3.0.0'
+  gem 'shoulda-matchers',   '~> 2.6.2', require: false
 end

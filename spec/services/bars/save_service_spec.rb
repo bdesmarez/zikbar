@@ -4,7 +4,7 @@ RSpec.describe Bars::SaveService do
   subject(:service) { Bars::SaveService.new(form, params) }
 
   let(:bar)         { Bar.new }
-  let(:drink_style) { DrinkStyle.create(name: "Rhum") }
+  let(:drink_style) { DrinkStyle.create(name: "Rhum", note: 2) }
   let(:form)        { BarForm.new(bar) }
 
   let(:params) do
@@ -13,23 +13,21 @@ RSpec.describe Bars::SaveService do
         name:         "Mon cul",
         address:      "Sur la commode",
         city:         "Montcuq",
-        country:      "France",
-        drink_style:  drink_style,
-        zik_style:    zik_style
+        country:      "fr",
+        drink_style_id:  drink_style.id,
+        zik_style_id:    zik_style.id
       }
     }
   end
 
-  let(:zik_style) { ZikStyle.create(name: "Twerk") }
+  let(:zik_style) { ZikStyle.create(name: "Twerk", note: 4) }
 
   describe "#call" do
     context "form is valid" do
       before :each do
-        allow(form).to receive(:validate).and_return(true)
       end
 
       it "returns true" do
-        allow(form).to receive(:save).and_return(true)
         expect(service.call).to eq(true)
       end
 
