@@ -1,0 +1,9 @@
+div class="columns small-4"
+  ul class="no-bullet"
+    - bars_search.facets.each do |facet_name, facet|
+      li
+        strong= facet_name
+        ul
+          - facet['terms'].each do |term|
+            li= (params[facet_name] == term['term']) ? term['term'] : link_to(term['term'], bars_path(facet_name => term['term']))
+
