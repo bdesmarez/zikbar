@@ -1,7 +1,7 @@
 class BarsController < ApplicationController
   expose(:bar)
-  expose(:bars)
-  expose(:bar_form) { BarForm.new(bar) }
+  expose(:bar_form)    { BarForm.new(bar) }
+  expose(:bars_search) { Bar.search params[:search].presence || "*" }
 
   def create
     service = Bars::SaveService.new(bar_form, params)
