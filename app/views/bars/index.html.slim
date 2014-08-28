@@ -1,18 +1,24 @@
+= render 'search_form'
+
 div class="row"
-  div class="columns small-12"
+  = render 'facets'
+
+  div class="columns small-8"
     table
       thead
         tr
           th Name
+          th Popularity
           th City
           th Country
           th Drink
           th Zik
           th Action
       tbody
-        - bars.each do |bar|
+        - bars_search.each do |bar|
           tr
             td= link_to bar.name, bar_path(bar)
+            td= bar.popularity
             td= bar.city
             td= country_name(bar.country)
             td
